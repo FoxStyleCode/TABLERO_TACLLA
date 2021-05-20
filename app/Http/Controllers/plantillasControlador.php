@@ -41,7 +41,7 @@ class plantillasControlador extends Controller
         //validar los campos de la plantilla a guardar
         $request->validate([
             'namep' => 'required',
-            'file' => 'required|max:3000',
+            'file' => 'required',
         ]);
         
         //crear una transacción para evitar guardar datos sin dependencia
@@ -53,7 +53,7 @@ class plantillasControlador extends Controller
         //si recibimos un archivo obtener el nombre del archivo y movelo a la carpeta imagenes
         if($archivo=$request->file('file')){
             $nombre = $archivo->getClientOriginalName();
-            $archivo->move('imagenes',$nombre); 
+            $archivo->move('imagenes', $nombre); 
         }
 
         //insertar la información de la plantilla

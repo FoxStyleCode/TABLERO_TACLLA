@@ -172,6 +172,7 @@ class aliadosController extends Controller
         File::delete("qrcodes/".$news->codigo.".svg");
 
         $resultado = DB::delete('call eliminar_aliado(?)', array($id));
+        
         if(isset($resultado)){
             return redirect('/aliados')->with('success', 'Aliado eliminado correctamente');
         }else{
