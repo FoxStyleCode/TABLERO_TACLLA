@@ -50,14 +50,14 @@ class viewController extends Controller
         $request->validate([
             'codigo' => 'required','max:4','min:4','string'],
             [
-            'codigo.required' => 'Ingresa el código para continuar'
+            'codigo.required' => 'Código no valido'
         ]);
                 
         $consultica = DB::select('call consulta_visitante(?)',array($request->codigo));
         if(count($consultica)){
             return view('viewAliados.vistaAliados',compact('consultica'));
         }else{
-            return back()->withErrors(['codigo'=>'codigo no valido'])->withInput([request('codigo')]);
+            return back()->withErrors(['codigo'=>'Código no valido'])->withInput([request('codigo')]);
         }
     }
 
@@ -69,7 +69,7 @@ class viewController extends Controller
         if(count($consultica)){
             return view('viewAliados.vistaAliados',compact('consultica'));
         }else{
-            return redirect('vx')->withErrors(['codigo'=>'codigo no valido'])->withInput([request('codigo')]);
+            return redirect('vx')->withErrors(['codigo'=>'Código no valido'])->withInput([request('codigo')]);
         }
         
     }

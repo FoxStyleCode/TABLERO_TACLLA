@@ -21,28 +21,26 @@
     </div>
     @endif
 
-    <div class="login">
-		<div class="login-screen">
-			<div class="app-title">
-				<h1>Bienvenido!</h1>
-			</div>
-
-			<div class="login-form">
+    <div class="contenedor">
+            <div class="contenedor__img">
+                <img src="{{asset('imagenes/Recurso2.png')}}">
+            </div>
+            <div class="contenedor__form">
                 <form action="{{url('vx')}}" method="POST">
-                @csrf
-				<div class="control-group">
-				<input type="text" name="codigo" class="@error('codigo') is-invalid @enderror" value="" placeholder="Ingresa tu código" id="login-pass"><br/>
-                @error('codigo')
-                 <span class="invalid-feedback" role="alert">
-                   <strong>{{$message}}</strong>
-                 </span>
-                @enderror 
-				</div>
-                <button type="submit" name="" id="" class="btn btn-primary">Ingresar</button>
+                    @csrf
+                    <div class="control-group">
+                    <h5>Bienvenido a Taclla VX</h5>
+                    <input type="text" name="codigo" class="@error('codigo') is-invalid @enderror" value="" placeholder="Ingresar código" id="login-pass"><br/>
+                    @error('codigo')
+                    <span class="invalid-feedback" role="alert">
+                    <strong><img src="{{asset('imagenes/Recurso11.png')}}" class="min_img">&nbsp;{{$message}}</strong>
+                    </span>
+                    @enderror 
+                    </div>
+                    <button type="submit" name="" id="" class="boton">Ingresar</button>
                 </form>
-			</div>
-		</div>
-	</div>
+            </div>
+    </div>
     
 </body>
 </html>

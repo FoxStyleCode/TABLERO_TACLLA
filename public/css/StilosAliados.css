@@ -1,79 +1,73 @@
 * {
     box-sizing: border-box;
-    }
+  }
     
-    *:focus {
+  *:focus {
         outline: none;
-    }
-    body {
+  }
+
+
+  body {
+    background-image: url('../imagenes/fondo_3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: Arial;
-    background-color: #1458ff;
     padding: 50px;
-    }
-    .login {
-    margin: 20px auto;
-    width: 300px;
-    }
-    .login-screen {
-    background-color: #FFF;
-    padding: 20px;
-    border-radius: 5px
-    }
-    
-    .app-title {
-    text-align: center;
-    color: #777;
-    }
-    
-    .login-form {
-    text-align: center;
-    }
-    .control-group {
-    margin-bottom: 10px;
-    }
-    
-    input {
-    text-align: center;
-    background-color: #ECF0F1;
-    border: 2px solid transparent;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 10px 0;
+  }
+
+  .contenedor{
     width: 250px;
-    transition: border .5s;
-    }
+    height: 240px;
+    border-radius: 5px;
+    background-color: #EAEDED;
+    padding: 30px 0px;
+    margin: 80px auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .contenedor > div{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .contenedor__form h5{
+    color: #ff4b1e;
+  }
+
+  .contenedor__form input{
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    height: 30px;
+  }
+
+  .contenedor__form input:focus{
+    color: #000;
+    background-color: #EBEDEF;
+  }
+
+
+  .contenedor__form .boton{
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4b1e;
+    color: #fff;
+    width: 80%;
+    height: 30px;
+  }
+
+  .contenedor__img > img{
+    width: 150px;
+  }
+
+  .min_img{
+    width: 15px;
+  }
+
+
     
-    input:focus {
-    border: 2px solid #3498DB;
-    box-shadow: none;
-    }
-    
-    .btn {
-      border: 2px solid transparent;
-      background: #ff4b1e;
-      color: #ffffff;
-      font-size: 16px;
-      line-height: 25px;
-      padding: 10px 0;
-      text-decoration: none;
-      text-shadow: none;
-      border-radius: 3px;
-      box-shadow: none;
-      transition: 0.25s;
-      display: block;
-      width: 250px;
-      margin: 0 auto;
-    }
-    
-    .btn:hover {
-      background-color: #ff4b6e;
-      cursor: pointer;
-    }
-    
-    .login-link {
-      font-size: 12px;
-      color: #444;
-      display: block;
-        margin-top: 12px;
-    }
