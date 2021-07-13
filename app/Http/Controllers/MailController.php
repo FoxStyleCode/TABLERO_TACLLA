@@ -46,7 +46,7 @@ class MailController extends Controller
 
         $message =  $request->all();
 
-        $emails = ['comercial@taclla.com','rlopez@taclla.com','ariel@taclla.com', 'manuel@taclla.com'];
+        $emails = ['comercial@taclla.com','rlopez@taclla.com','ariel@taclla.com', 'manuel@taclla.com', 'estebanbetinalvarez@gmail.com'];
 
         Mail::to($emails)->send(new ContactosTacllaMail($message));
         
