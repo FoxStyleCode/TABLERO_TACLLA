@@ -42,5 +42,24 @@
             </div>
     </div>
     
+
+    <script type="text/javascript"> 
+        function ChangeIt() 
+        {
+        var bgArray = [];
+            bgArray[0] = "{{asset('imagenes/loginvx/fondo_1.jpg')}}";
+            bgArray[1] = "{{asset('imagenes/loginvx/fondo_2.jpg')}}";
+            bgArray[2] = "{{asset('imagenes/loginvx/fondo_3.jpg')}}";
+
+        var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+
+            document.body.background = src=bg;
+        }
+    </script>
+
+    <script type="text/javascript"> 
+        ChangeIt();
+    </script> 
+
 </body>
 </html>
