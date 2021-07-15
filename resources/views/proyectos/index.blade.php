@@ -187,7 +187,6 @@
 {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
 
 <script src="{{asset('plugins/sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
-
 <script src="{{asset('js/jquery-3.5.1.js')}}"></script>
 <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>

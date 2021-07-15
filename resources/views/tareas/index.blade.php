@@ -2,13 +2,37 @@
 
 <style>
     .prue{
-        
         border-radius: 10px;
     }
-
     .ctado:hover{
         opacity: 0.9;
     }
+
+    @media screen and (max-width: 996px) {
+       table {
+           width:100%;
+       }
+       thead {
+           display: none;
+       }
+       tr:nth-of-type(2n) {
+           background-color: inherit;
+       }
+       tr td:first-child {
+           background: #f0f0f0;
+           font-weight:bold;
+           font-size:1.3em;
+       }
+       tbody td {
+           display: block;
+           text-align:center;
+       }
+       tbody td:before {
+           content: attr(data-th);
+           display: block;
+           text-align:center;
+       }
+}
 </style>
 
 @section('contenido')
@@ -39,7 +63,6 @@
                                     <td class="active">Persona</td>
                                     <td class="active">Asignar</td>
                                     <td class="active">Archivos</td>
-                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -96,10 +119,8 @@
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                                             <button type="submit" class="btn btn-success">Asignar</button>
                                                             </div>
-
                                                     </form>
                                                     </div>
-                                                    
                                                 </div>
                                                 </div>
                                             </div>
